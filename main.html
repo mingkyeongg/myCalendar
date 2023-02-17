@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climbing Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class ="todo">
+  <form id="todo-form">
+    <input type="text" placeholder="To-do list" required />
+  </form>
+  <ul id="todo-list"></ul>
+  <p id="TIC">Today I Climb</p>
+    <select class="dropdown" id="Gym" name="Gym" onchange="selectGymGrade(this)">
+      <option>Select Gym</option>
+      <option value="theClimb">더클라임</option>
+      <option value="gravity">그래비티 클라이밍</option>
+    </select>
+    <select class="dropdown" id="ClimbGrade" name="Grade" onchange="showValue(this)">
+      <option>Select Grade</option>
+    </select>
+    <div id="pushGrade"></div>
+  </div>
+    <div class="calendar">
+        <div class="header">
+                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                <button class="year-month" onclick="goToday()"></button>
+                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+        </div>
+        <div class="main">
+            <div class="days">
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+            </div>
+            <div class="dates"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="todo.js"></script>
+    <script src="select.js"></script>
+</body>
+</html>
